@@ -2,7 +2,7 @@
 
 import { ChangeEvent, useState } from 'react'
 
-export default function MediaPicker() {
+export function MediaPicker() {
   const [preview, setPreview] = useState<string | null>(null)
 
   function onFileSelected(event: ChangeEvent<HTMLInputElement>) {
@@ -21,6 +21,7 @@ export default function MediaPicker() {
     <>
       <input
         onChange={onFileSelected}
+        name="coverUrl"
         type="file"
         id="media"
         className="invisible h-0 w-0"
